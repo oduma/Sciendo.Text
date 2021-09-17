@@ -6,6 +6,6 @@ namespace Sciendo.Test.Loader.Api
 {
     public interface IWriter
     {
-        void Write(IEnumerable<Item> batch);
+        IList<int> Write(IEnumerable<Item> batch);
     }
 }

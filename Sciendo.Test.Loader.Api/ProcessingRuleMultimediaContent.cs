@@ -11,7 +11,7 @@ namespace Sciendo.Test.Loader.Api
 
         public bool Process(Item item, ref string input)
         {
-            if (input.StartsWith("<") && input.EndsWith(">") && input.ToLower().Contains(multimediaMaker))
+            if (input.StartsWith("<") && input.ToLower().Contains(multimediaMaker))
             {
                 item.ContentType = ContentType.MultimediaMessage;
                 return false;

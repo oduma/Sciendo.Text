@@ -24,29 +24,29 @@ namespace Sciendo.Test.Loader.Api
             {
                 if(LineStarstWithDate(fileLine))
                 {
-                    if(itemSource!=null)
+                    if(!string.IsNullOrEmpty(itemSource.ToString()))
                     {
-                        var item = new Item();
                         var source = itemSource.ToString();
-                        itemSource = null;
-                        yield return item.LoadItem(progessingRules, source);
+                        var item = new Item();
+                        item.LoadItem(progessingRules, source);
+                        if(item!=null && item.ContentType!= ContentType.None)
+                            yield return item;
                     }
-                    else
-                    {
-                        itemSource.Append(fileLine);
-                    }
+                    itemSource = new StringBuilder();
+                    itemSource.Append(fileLine);
                 }
                 else
                 {
                     itemSource.Append(fileLine);
                 }
             }
-            if(itemSource!=null)
+            if(!string.IsNullOrEmpty(itemSource.ToString()))
             {
                 var item = new Item();
                 var source = itemSource.ToString();
-                itemSource = null;
-                yield return item.LoadItem(progessingRules, source);
+                item.LoadItem(progessingRules, source);
+                if (item != null && item.ContentType != ContentType.None)
+                    yield return item;
             }
         }
 

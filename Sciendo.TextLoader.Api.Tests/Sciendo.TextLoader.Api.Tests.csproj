@@ -16,4 +16,16 @@
     <ProjectReference Include="..\Sciendo.Test.Loader.Api\Sciendo.Test.Loader.Api.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="messages.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="MultiLineMessagesFile.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="OneLineMessagesFile.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

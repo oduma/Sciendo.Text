@@ -28,5 +28,6 @@ namespace Sciendo.Test.Loader.Api
         public string Link { get; set; }
 
         public ContentType ContentType { get; set; }
+
     }
 }

@@ -9,6 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sciendo.Test.Loader.Api", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sciendo.TextLoader.Api.Tests", "Sciendo.TextLoader.Api.Tests\Sciendo.TextLoader.Api.Tests.csproj", "{E6FD4572-3C99-47BE-B3FD-9C5F5E28BB9F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{0AE2A943-7F66-45DA-97EC-31A704AC0889}"
+	ProjectSection(SolutionItems) = preProject
+		Database\messages.db = Database\messages.db
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

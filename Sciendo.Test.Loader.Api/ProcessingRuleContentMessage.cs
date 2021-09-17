@@ -13,6 +13,7 @@ namespace Sciendo.Test.Loader.Api
             item.Subject = input;
             if (item.ContentType == ContentType.None)
                 item.ContentType = ContentType.Message;
+            input = string.Empty;
             return false;
         }
     }

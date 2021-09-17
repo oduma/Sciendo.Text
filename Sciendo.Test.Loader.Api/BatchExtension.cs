@@ -28,7 +28,7 @@ namespace Sciendo.Test.Loader.Api
                 yield return bucket.Take(count).ToArray();
         }
 
-        public static void ProcessBatchesNoReturn<TIn>(this IEnumerable<IEnumerable<TIn>> batches, Action<IEnumerable<TIn>> procesingAction)
+        public static void ProcessBatchesNoReturn<TIn>(this IEnumerable<IEnumerable<TIn>> batches, Func<IEnumerable<TIn>,IList<int>> procesingAction)
         {
             foreach(var batch in batches)
             {
